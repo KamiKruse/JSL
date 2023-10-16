@@ -34,30 +34,30 @@ let people = ["Greg", "Mary", "Devon", "James"];
 //     console.log(people[i]);
 // }
 
-for (let names of people)
-{
-    console.log(names);
-}
-let removedGreg = people.slice(0,1);
-console.log(removedGreg); 
+// for (let names of people)
+// {
+//     console.log(names);
+// }
+// let removedGreg = people.slice(0,1);
+// console.log(removedGreg); 
 
-let removedJames = people.pop()
-console.log(removedJames)
-console.log(people);
-console.log(people.splice(0,0,"Matt"));
-console.log(people);
-console.log(people.push("Vivek Sreekumar"));
-console.log(people);
+// let removedJames = people.pop()
+// console.log(removedJames)
+// console.log(people);
+// console.log(people.splice(0,0,"Matt"));
+// console.log(people);
+// console.log(people.push("Vivek Sreekumar"));
+// console.log(people);
 
-for(let names of people)
-{
-    console.log(names);
-    if (names === "Mary")
-    {
-        break;
-    }
+// for(let names of people)
+// {
+//     console.log(names);
+//     if (names === "Mary")
+//     {
+//         break;
+//     }
     
-}
+// }
 
 // for(let i =0; i< people.length; i++){
 //     if(i > 1){
@@ -65,16 +65,33 @@ for(let names of people)
 //     }
 //     console.log(people[i]);
 // }
-let noMattOrMary = people.slice(2);
-console.log(noMattOrMary);
-console.log(people.indexOf("Mary"));
-console.log(people.indexOf("Foo"));
-console.log(people);
-let newPeople = ["Greg", "Mary", "Devon", "James"]
-people = newPeople;
-console.log(people);
-let addingNewPeople = people.splice(2,1,"Elizabeth", "Artie");
-console.log(people);
-let withBob = people.concat("Bob");
-console.log(withBob)
+// let noMattOrMary = people.slice(2);
+// console.log(noMattOrMary);
+// console.log(people.indexOf("Mary"));
+// console.log(people.indexOf("Foo"));
+// console.log(people);
+// let newPeople = ["Greg", "Mary", "Devon", "James"]
+// people = newPeople;
+// console.log(people);
+// let addingNewPeople = people.splice(2,1,"Elizabeth", "Artie");
+// console.log(people);
+// let withBob = people.concat("Bob");
+// console.log(withBob)
 
+//Primeagen's bubble sort technique
+
+let arr = [7,2,9,3,1];
+
+for(let i=0; i<arr.length; ++i)
+{
+    for(let j=0; j<arr.length-1-i; ++j)
+    {
+        if (arr[j] > arr[j + 1])
+        {
+            let tmp = arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=tmp;
+        }
+    }
+}
+console.log(arr);
