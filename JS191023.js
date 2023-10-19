@@ -104,8 +104,55 @@ function extractEveryThird(someArr)
 
 // console.log(extractEveryThird([1,2,3]));
 
-// function countEvensAndOdds(newArr)
+function countEvensAndOdds(newArr)
 {
-
+    let evenOdd = {};
+    evenOdd.evenCount = 0;
+    evenOdd.OddCount = 0;
+    for (let i=0; i < newArr.length; i++)
+    {
+        if(newArr[i]%2 === 0)
+        {
+            evenOdd.evenCount += 1;
+        }
+        else
+        {
+            evenOdd.OddCount += 1;
+        }
+    }
+    return evenOdd;
 }
 
+console.log(countEvensAndOdds([1,2,3,4,5,6,7])); 
+
+let mylet = "Hello from global";
+
+function scopePractice() {
+   let mylet = "Hello from function scope";
+   return mylet;
+}
+
+// console.log(scopePractice());
+// console.log(mylet);
+
+let tricky = "Hello from global";
+
+function trickyScopePractice() {
+    tricky = "Hello from function scope";
+}
+
+console.log(tricky);
+
+function onlyCapitalLetters(arr)
+{
+    let extract = [];
+    for (let i =0; i < arr.length; i++)
+    {
+        if (arr[i]===arr[i].toUpperCase())
+        {
+            extract.push(arr[i]);
+        }
+    }
+    return extract.join('');
+}
+console.log(onlyCapitalLetters("VIV"))
