@@ -16,28 +16,27 @@ function remBeg(arr)
 
 // isPalindrome
 
-function isPalindrome(str)
+//Saw the solution
+function isPalindrome(str)                                
 {
-    let pali=[];
-    for(let i=0; i < str.length; i++)
+    let cleanedString = str.toLowerCase().replace(/[^a-z]/g, '');
+    for(let i=0; i<cleanedString.length/2; i++)
     {
-        // console.log(str[i])
-        for(let j=str.length -1 ; j>i; j--)
+        if(cleanedString[i] !== cleanedString[cleanedString.length - 1 - i])
         {
-            // console.log(str[j]);
-            pali.push(str[j])
-            console.log(pali)
+            return false;
         }
     }
-    // if( pali.toString === str)
-    // {
-    //     return true;
-    // }
-    // else{
-    //     return false;
-    // }
-    // console.log(pali)
-    // return pali;
+    return true;
 }
 
-console.log(isPalindrome("hannah"));
+console.log(isPalindrome('a man a plan a canal Panama'));
+
+//Saw the solution
+function isPalindrome2(str){
+    let cleanedString = str.toLowerCase().replace(/[^a-z]/g, '');          // Space and Case insensitive
+    return cleanedString.split('').reverse().join('') === cleanedString;
+  }
+  
+console.log(isPalindrome2('a man a plan a canal Panama'));
+
