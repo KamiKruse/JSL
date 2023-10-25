@@ -146,11 +146,23 @@ function singleLetterCount(word, letter)
 function multipleLetterCount(str)
 {
     let mlc = {};
-    for(let i=0; i<str.length; i++)
+    let count = 1;
+   
+    for(let i=0; i< str.length; i++)
     {
-        console.log(mlc.str[i]);
+        if(!(str[i] in mlc))         // Looked at Solution and this If() was the key thing that was missing from my logic. I was do
+        {
+            mlc[str[i]] = count; 
+            console.log(str[i])
+        }
+        else
+            {
+                mlc[str[i]] = count + 1;
+            } 
     }
 
+
+    return mlc;
 }
 
-console.log(multipleLetterCount('hello'));
+console.log(multipleLetterCount('hello')); // Looked at Solution
