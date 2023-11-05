@@ -98,19 +98,49 @@ function rFB(arr)
 
 //FizzBuzz Udemy
 let output = [];
-let n = 1;
+let n = 1; 
 let i=0;
 function fizzBuzzUdemy()
 {
-    output.push(n++);
+    if((n%3===0) && (n%5===0))
+    {
+        output.push("FizzBuzz");
+    }
+    else if(n%3===0)
+    {
+        output.push("Fizz");
+    }
+    else if(n%5===0)
+    {
+        output.push("Buzz");
+    }
+    else
+    {
+        output.push(n);
+    }
+    n++;
+    
+
     console.log(output)
 }
 
 fizzBuzzUdemy();
-
 fizzBuzzUdemy();
-
 fizzBuzzUdemy();
-
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
+fizzBuzzUdemy();
 
 
