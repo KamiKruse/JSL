@@ -2,12 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/JS191223.js"></script>
 </head>
 <body>
-    <p>Including JS from an external file</p>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+    <script>
+        let sec = document.querySelector("#container") // 1
+        sec.style.background = "blue"
+        let helloText = document.createElement("text") // 2
+        helloText.innerText = "Hello"   // 5
+        sec.appendChild(helloText)      // 5
+        let liSecond = document.getElementsByClassName("second") // 3
+        for(let i=0; i<liSecond.length; i++)                     // 3
+        {                                                        // 3
+            liSecond[i].innerText = "diff"                       // 3
+        }                                                        // 3  
+        let olLiThird = document.querySelector("ol li.third")    // 4
+        olLiThird.innerText = "Gotcha"                           // 4
+        // for(let i=0; i<olLiThird.length; i++)
+        // {
+        //     olLiThird[i].innerText = "Gotcha!"
+        // }
+        // for(let i=0; i<olLiThird.length; i++)
+        // { 
+        //     let thirdElement = olLiThird[i].getElementsByClassName("third")
+        //     if(thirdElement.length > 0)
+        //     {
+        //         thirdElement[0].innerText = "Gotcha!"
+        //     }
+        // }
+        let crMain = document.createElement("class")            // 6
+        let footDiv = document.querySelector(".footer")         // 6
+        crMain.className = "main"                               // 6
+        footDiv.appendChild(crMain)                             // 6
+        footDiv.removeChild(crMain)                             // 7
+        let newLi = document.createElement("li")
+        newLi.innerText = "four"
+        let ulEle = document.querySelector("ul")
+        ulEle.appendChild(newLi)
+        // for(let i=0; i<ulEle.length; i++)
+        // {
+        //     let fourthEle = ulEle[i].appendChild(newLi)
+        // }
+        let olA = document.querySelectorAll("ol")
+        for(let i=0; i<olA.length; i++)
+        {
+            olA[i].style.background = "green"
+        }
+        footDiv.remove()
+    </script>
 </body>
 </html>
- 
